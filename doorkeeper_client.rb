@@ -125,7 +125,7 @@ class DoorkeeperClient < Sinatra::Base
 
     client.auth_code.authorize_url(
       redirect_uri: app.confidential_client_redirect_uri,
-      scope: 'read',
+      scope: 'write',
       state: generate_state!,
       code_challenge_method: code_challenge_method,
       code_challenge: code_challenge
